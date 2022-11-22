@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>add employee</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Add an employe details !</h1>
+      <form action="/add_emp" method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label  class="form-label">First Name</label>
+          <input type="text" class="form-control" id="first_name" name="first_name" value="{{first_name}}">
+        
+        </div> <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="last_name" name="last_name" value="{{last_name}}" >
+        
+        </div> <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Salary(int)</label>
+          <input type="text" class="form-control" id="salary" name="salary" value="{{salary}}">
+        
+        </div> <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Department (int)</label>
+          <input type="text" class="form-control" id="dept" name="dept" value="{{dept}}" >
+        
+        </div> <div class="mb-3">
+          <label  class="form-label">Role(int)</label>
+          <input type="text" class="form-control" id="Role" name="Role" value="{{Role}}">
+        
+        </div>
+         <div class="mb-3">
+          <label" class="form-label">Bonus(int)</label>
+          <input type="text" class="form-control" id="bonus" name="bonus" value="{{Bonus}}" >
+        </div>
+        <div class="mb-3">
+          <label" class="form-label">Phone Number(int)</label>
+          <input type="text" class="form-control" id="phone"  name="phone" value="{{Phone}}" >
+        </div>
+       
+      
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+
+
+
+
+        <h1>Office management system!</h1>
+        <hr>
+        <a class="btn btn-primary" href="/all_emp" role="button">View all Employee</a>
+        <a class="btn btn-primary" href="/add_emp" role="button">Add an Employee</a>
+        <a class="btn btn-primary" href="/remove_emp" role="button">Remove An Employee</a>
+        <a class="btn btn-primary" href="/filter_emp" role="button">Filter Employee Details</a>
+
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>
